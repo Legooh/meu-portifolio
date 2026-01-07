@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- https://boxicons.com/ -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+        <title>Portfolio Profissional</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="header__logo"></a>
+
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li>
+                            <a href="#" data-goto="home" class="menu__link"
+                                >Início</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" data-goto="about" class="menu__link"
+                                >Sobre</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" data-goto="services" class="menu__link"
+                                >Serviços</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" data-goto="portfolio" class="menu__link"
+                                >Portfólio</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" data-goto="contact" class="menu__link"
+                                >Contato</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-section home" id="home">
+            <div class="home__content">
+                <h2 class="home__title">Olá, eu sou</h2>
+                <h1 class="home__name">Stewart Nunes</h1>
+                <h2 class="home__title">
+                    E eu sou <span class="multiple-text"></span>
+                </h2>
+                <div class="home__description">
+                    <p>
+                        Profissional de tecnologia, focado em aprendizado contínuo e no desenvolvimento de projetos, explorando as inúmeras oportunidades do universo da programação.
+                    </p>
+                </div>
+                <div class="home__social social-media">
+                    <a
+                        target="_blank"
+                        href="https://api.whatsapp.com/send?phone=5548998665089&text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o."
+                        class="social-media__link"
+                        ><i class="bx bxl-whatsapp"></i
+                    ></a>
+                    <a
+                        target="_blank"
+                        href="https://www.instagram.com/stewartqls"
+                        class="social-media__link"
+                        ><i class="bx bxl-instagram"></i
+                    ></a>
+                    <a
+                        target="_blank"
+                        href="https://github.com/legooh"
+                        class="social-media__link"
+                        ><i class="bx bxl-github"></i
+                    ></a>
+                    <!--  <a href="" class="social-media__link"
+                        ><i class="bx bxl-telegram"></i
+                    ></a> -->
+                </div>
+                <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/16GmkLF9T_k8_y5V_sf58P7A7phzb3CoE/view?usp=sharing"
+                    class="btn"
+                    >Baixar CV</a
+                >
+            </div>
+
+            <div class="home__image">
+                <!--    <img src="./img/test-avatar.jpg" alt="home-image" /> -->
+            </div>
+        </section>
+
+        <section class="page-section about" id="about">
+            <div class="about__image">
+                <img src="./img/test-avatar.jpg" alt="foto de perfil" />
+            </div>
+            <div class="about__content">
+                <h2 class="page-section__title about__title">
+                    Sobre <span>mim</span>
+                </h2>
+                <h3 class="about__sub-title">Desenvolvedor Front-end</h3>
+                <div class="about__description">
+                    <p>
+                        Busco minha primeira oportunidade como desenvolvedor. Sou um profissional da área de tecnologia, com perfil curioso, foco em aprendizado contínuo e interesse em inovação. Possuo conhecimento sólido em sistemas ERP, sempre buscando evoluir por meio de novos desafios e projetos.
+                    </p>
+                </div>
+                <a href="" class="btn">Saiba Mais</a>
+            </div>
+        </section>
+
+      <!-- <section class="page-section services" id="services">
+            <h2 class="page-section__title services__title">
+                Nossos <span>Serviços</span>
+            </h2>
+            <div class="services__items">
+                <div class="services__item">
+                    <i class="bx bx-code-alt"></i>
+                    <h3 class="services__sub-title">Desenvolvimento Web</h3>
+                    <p class="services__description">
+                        Com habilidades em desenvolvimento web, estou
+                        comprometido em transformar suas ideias em realidade
+                        digital. Meu enfoque personalizável cria sites que não
+                        só funcionam bem, como também encantam os usuários,
+                        impulsionando seu negócio e destacando-o online.
+                    </p>
+                    <a href="" class="btn">Saiba Mais</a>
+                </div>
+                <div class="services__item">
+                    <i class="bx bxs-paint"></i>
+                    <h3 class="services__sub-title">Design Gráfico</h3>
+                    <p class="services__description">
+                        Embora eu esteja no início da jornada em design
+                        gráfico, estou animado para mostrar como minhas ideias
+                        e paixão pelo design podem criar visuais incríveis para
+                        sua marca.
+                    </p>
+                    <a href="" class="btn" class="btn.graphic">Saiba Mais</a>
+                </div>
+                <div class="services__item">
+                    <i class="bx bx-bar-chart-alt"></i>
+                    <h3 class="services__sub-title">Marketing Digital</h3>
+                    <p class="services__description">
+                        Meu serviço de Marketing Digital conecta sua marca ao
+                        público certo, no momento certo, para alcançar
+                        resultados expressivos. Vamos elevar sua estratégia e
+                        conquistar o sucesso juntos.
+                    </p>
+                    <a href="" class="btn">Saiba Mais</a>
+                </div>--> 
+        <section class="page-section skills" id="skills">
+            <h2 class="page-section__title skills__title">
+                Minhas <span>Habilidades</span>
+            </h2>
+            <div class="skills__grid">
+                <div class="skill-card">
+                    <div class="skill-card__inner">
+                        <i class="bx bxl-javascript skill-card__icon"></i>
+                        <h3 class="skill-card__title">Programação</h3>
+                        <p class="skill-card__list">JavaScript, TypeScript</p>
+                    </div>
+                </div>
+
+                        <div class="skill-card">
+                            <div class="skill-card__inner">
+                                <i class="bx bxl-html5 skill-card__icon"></i>
+                                <h3 class="skill-card__title">Front-End</h3>
+                                <p class="skill-card__list">HTML, CSS</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-card__inner">
+                                <i class="bx bx-server skill-card__icon"></i>
+                                <h3 class="skill-card__title">Back-End</h3>
+                                <p class="skill-card__list">PHP, APIs</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-card__inner">
+                                <i class="bx bx-cloud skill-card__icon"></i>
+                                <h3 class="skill-card__title">Cloud</h3>
+                                <p class="skill-card__list">AWS, Azure</p>
+                            </div>
+                        </div>
+
+                    <div class="skill-card skill-card--db">
+                        <div class="skill-card__inner">
+                            <!-- use the regular boxicons database icon to match others -->
+                            <i class="bx bx-database skill-card__icon"></i>
+                            <h3 class="skill-card__title">Banco de Dados</h3>
+                            <p class="skill-card__list">MySQL, PostgreSQL</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+        <section class="page-section portfolio" id="portfolio">
+            <h2 class="page-section__title portfolio__title">
+                Últimos <span>Projetos</span>
+            </h2>
+            <div class="portfolio__items">
+                <div class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="./gif/projeto1.gif" alt="imagem do projeto 01" />
+                    </div>
+                    <div class="portfolio__layer">
+                        <h4 class="portfolio__sub-title">Login</h4>
+                        <p class="portfolio__description">
+                            Meu primeiro projeto solo; ficou bom e talvez eu o
+                            utilize em algum site no futuro.
+                        </p>
+                        <a target="_blank" href="https://github.com/Legooh/Login-animation" class="portfolio__link"
+                            ><i class="bx bx-link-external"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="img/projeto2.png" alt="imagem do projeto 02" />
+                    </div>
+                    <div class="portfolio__layer">
+                        <h4 class="portfolio__sub-title">Crachá NWL</h4>
+                        <p class="portfolio__description">
+                            Meu crachá da NLW com a Rocketseat — um projeto
+                            feito com ajuda.
+                        </p>
+                        <a target="_blank" href="https://github.com/Legooh/cracha-nlw" class="portfolio__link"
+                            ><i class="bx bx-link-external"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="/gif/projeto3.gif" alt="imagem do projeto 03" />
+                    </div>
+                    <div class="portfolio__layer">
+                        <h4 class="portfolio__sub-title">Super Mario</h4>
+                        <p class="portfolio__description">
+                            Um jogo feito apenas com HTML e usando um framework
+                            CSS; um projeto que pode ser aprimorado no futuro.
+                        </p>
+                        <a target="_blank" href="https://github.com/Legooh/Mario-jump" class="portfolio__link"
+                            ><i class="bx bx-link-external"></i
+                        ></a>
+                    </div>
+                </div>
+              <!--  <div class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="./image.jpg" alt="portfolio-image-01" />
+                    </div>
+                    <div class="portfolio__layer">
+                        <h4 class="portfolio__sub-title">Web Design</h4>
+                        <p class="portfolio__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Doloremque laboriosam tempore commodi pariatur
+                            a deleniti!
+                        </p>
+                        <a href="#" class="portfolio__link"
+                            ><i class="bx bx-link-external"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="./image.jpg" alt="portfolio-image-01" />
+                    </div>
+                    <div class="portfolio__layer">
+                        <h4 class="portfolio__sub-title">Web Design</h4>
+                        <p class="portfolio__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Doloremque laboriosam tempore commodi pariatur
+                            a deleniti!
+                        </p>
+                        <a href="#" class="portfolio__link"
+                            ><i class="bx bx-link-external"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="./image.jpg" alt="portfolio-image-01" />
+                    </div>
+                    <div class="portfolio__layer">
+                        <h4 class="portfolio__sub-title">Web Design</h4>
+                        <p class="portfolio__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Doloremque laboriosam tempore commodi pariatur
+                            a deleniti!
+                        </p>
+                        <a href="#" class="portfolio__link"
+                            ><i class="bx bx-link-external"></i
+                        ></a>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <section class="page-section contact" id="contact">
+            <h2 class="page-section__title contact__title">
+                Contato <span>comigo!</span>
+            </h2>
+            <form action="mailto:legooh3600@gmail.com" class="contact__form form-contact">
+                <div class="form-contact__item">
+                    <input type="text" placeholder="Nome Completo" />
+                    <input type="email" placeholder="Email" />
+                </div>
+                <div class="form-contact__item">
+                    <input type="tel" placeholder="Telefone" />
+                    <input type="text" placeholder="Assunto" />
+                </div>
+                <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    class="form-contact__textarea"
+                    placeholder="Sua mensagem"
+                ></textarea>
+                <button action="mailto:legooh3600@gmail.com" type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer__content">
+                <p>Copyright &copy; 2023 por Stewart | Todos os direitos reservados.</p>
+            </div>
+            <div class="footer__icon-top">
+                <a href="#" class="footer__link">
+                    <i class="bx bx-chevron-up"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
