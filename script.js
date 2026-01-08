@@ -104,3 +104,26 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
         e.target.value = value;
     }
 });
+
+// Form submission with redirect to thank-you.html
+const contactForm = document.querySelector('.contact__form');
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    try {
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            window.location.href = './thank-you.html';
+        } else {
+            alert('Erro ao enviar a mensagem. Tente novamente.');
+        }
+    } catch (error) {
+        alert('Erro de rede. Verifique sua conexão e tente novamente.');
+    }
+});
