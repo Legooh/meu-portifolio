@@ -94,3 +94,13 @@ const typed = new Typed(".multiple-text", {
     backDelay: 1000,
     loop: true,
 });
+
+// Phone mask for Brazilian format
+document.querySelector('input[name="phone"]').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length <= 11) {
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+        e.target.value = value;
+    }
+});

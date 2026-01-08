@@ -52,7 +52,7 @@ html,
 body {
     height: 100%;
     font-size: 75%;
-    line-height: 1;
+    line-height: 1.3;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: "Poppins", sans-serif;
@@ -281,11 +281,9 @@ body._lock {
     margin: 1rem 0 3rem;
 }
 
-/* --Skills grid (neon cards) -- */
 .skills__grid {
     margin-top: 2.8rem;
     display: grid;
-    /* 3 columns so 3 on top and 2 below for 5 items */
     grid-template-columns: repeat(3, minmax(18rem, 1fr));
     gap: 2rem;
     align-items: stretch;
@@ -322,9 +320,8 @@ body._lock {
     color: var(--main-color);
     margin-bottom: 1.2rem;
 }
-/* make database icon slightly smaller so its visual weight matches other icons */
 .skill-card--db .skill-card__icon {
-    font-size: 4.6rem;
+    font-size: 5.2rem;
 }
 .skill-card__title {
     font-size: 2.2rem;
@@ -335,7 +332,6 @@ body._lock {
     color: rgba(255,255,255,0.9);
 }
 
-/* subtitle for skills */
 .skills__subtitle {
     text-align: center;
     font-size: 3rem;
@@ -346,19 +342,13 @@ body._lock {
 .skills__subtitle span {
     color: var(--main-color);
 }
-
-/* main title used in the skills section */
 .skills__title {
     text-align: center;
     font-weight: 700;
     font-size: 3.6rem;
-    /* add top margin so title sits clearly below the About section */
     margin: 4rem 0 3rem 0;
 }
 .skills__title span { color: var(--main-color); }
-
-/* smaller adjustments for very small screens will be placed in media queries below */
-
 
 /* --Portfolio-- */
 
@@ -710,4 +700,23 @@ body._lock {
     .footer__icon-top {
         margin: 0 0 2rem 0;
     }
+}
+
+/* --Thank You Page-- */
+
+.thank-you-content {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.thank-you-content h1 {
+    font-size: 4.2rem;
+    margin-bottom: 2.6rem;
+    color: var(--text-color);
+}
+
+.thank-you-content p {
+    font-size: 2.2rem;
+    margin-bottom: -4rem;
+    color: var(--text-color);
 }
