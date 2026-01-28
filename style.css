@@ -149,12 +149,18 @@ body._lock {
 /* --Home-- */
 
 .home {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 .home__content {
   padding: 0 4rem 0 0;
+  flex: 0 0 60%;
+  max-width: 1000px;
+  min-width: 320px;
 }
 .home__title {
   font-size: 3.2rem;
@@ -173,6 +179,7 @@ body._lock {
 .home__description {
   font-size: 1.6rem;
   line-height: 1.25;
+  max-width: 95%;
 }
 .social-media__link {
   display: inline-flex;
@@ -195,11 +202,33 @@ body._lock {
 }
 
 .home__image {
-  width: 370px;
-  height: 200px;
-  border-radius: 80%;
-  overflow: hidden;
+  position: absolute;
+  top: 18rem;
+  right: 7%;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  overflow: visible;
   animation: floatImage 4s ease-in-out infinite;
+  margin-left: 0;
+}
+
+@media (max-width: 100px) {
+  .home__content {
+    flex: 1 1 100%;
+    padding: 0;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .home__image {
+    margin-left: 0;
+    align-self: top;
+    width: 100%;
+  }
+  .newScreen .code-card {
+    width: 100%;
+    margin: 1rem auto;
+  }
 }
 
 @keyframes floatImage {
@@ -535,6 +564,19 @@ body._lock {
   .footer {
     padding: 2rem 3%;
   }
+  /* Make the code card and image static on smaller screens */
+  .home__image {
+    position: static;
+    margin-left: 0;
+    top: auto;
+    right: auto;
+    align-self: center;
+    width: 100%;
+  }
+  .newScreen .code-card {
+    width: 95%;
+    margin: 1rem auto;
+  }
 }
 @media (max-width: 767px) {
   .skills__grid {
@@ -722,4 +764,108 @@ body._lock {
   font-size: 2.2rem;
   margin-bottom: -4rem;
   color: var(--text-color);
+}
+
+.newScreen {
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+  --card-radius: 6px;
+}
+
+.newScreen {
+  color: var(--text-color);
+  font-family: "Fira Code", monospace;
+  margin: 0;
+  min-height: auto;
+  display: block;
+}
+
+.newScreen .code-card {
+  background: var(--second-bg-color);
+  border-radius: var(--card-radius);
+  padding: 0;
+  width: 570px;
+  height: 205px;
+  max-width: 95%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.newScreen .code-card .title-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--second-bg-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.newScreen .window-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.newScreen .window-controls .control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
+}
+
+.newScreen .window-controls .control.red {
+  background: #ff5f56;
+}
+.newScreen .window-controls .control.yellow {
+  background: #ffbd2e;
+}
+.newScreen .window-controls .control.green {
+  background: #27c93f;
+}
+
+.newScreen .code-card .title {
+  color: var(--text-color);
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.newScreen .portfolio-link {
+  margin-left: 170px;
+  color: var(--main-color);
+  font-size: 13px;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.newScreen .code-card pre {
+  margin: 0;
+  color: var(--text-color);
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  padding: 18px;
+  background: transparent;
+  overflow: auto;
+  min-height: 160px;
+}
+
+/* Cores estilo código */
+.newScreen .keyword {
+  color: var(--main-color);
+}
+.newScreen .string {
+  color: #6ee7b7;
+}
+.newScreen .number {
+  color: #facc15;
+}
+.newScreen .property {
+  color: #a78bfa;
 }

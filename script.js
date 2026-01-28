@@ -84,8 +84,8 @@ if (iconMenu) {
 
 const typed = new Typed(".multiple-text", {
   strings: ["Desenvolvedor Front-end", "Analista de Sistemas"],
-  typeSpeed: 100,
-  backSpeed: 100,
+  typeSpeed: 70,
+  backSpeed: 40,
   backDelay: 1000,
   loop: true,
 });
