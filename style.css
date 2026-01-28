@@ -161,6 +161,7 @@ body._lock {
   flex: 0 0 60%;
   max-width: 1000px;
   min-width: 320px;
+  margin-top: 8%;
 }
 .home__title {
   font-size: 3.2rem;
