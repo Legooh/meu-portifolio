@@ -123,7 +123,7 @@ body._lock {
   font-size: 4.5rem;
 }
 .btn {
-  margin-top: 10%;
+  margin-top: 9%;
   display: inline-block;
   padding: 1rem 2.8rem;
   background-color: var(--main-color);
@@ -157,6 +157,8 @@ body._lock {
   flex-wrap: wrap;
 }
 .home__content {
+  position: relative;
+  z-index: 2;
   padding: 0 4rem 0 0;
   flex: 0 0 60%;
   max-width: 1000px;
@@ -214,23 +216,36 @@ body._lock {
   margin-left: 0;
 }
 
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
   .home__content {
     flex: 1 1 100%;
     padding: 0;
     max-width: 100%;
     min-width: 0;
+    margin-bottom: 1rem; /* espaço extra quando card for para baixo */
   }
   .home__image {
+    position: static;
     margin-left: 0;
-    align-self: top;
+    align-self: flex-start;
     width: 100%;
+    margin-top: 1.6rem; /* espaçamento entre botão e card */
   }
   .newScreen .code-card {
-    width: 100%;
+    width: 95%;
     margin: 1rem auto;
   }
+  /* Spacer para evitar sobreposição do botão */
+  .mobile-spacer {
+    display: block;
+    height: 2.4rem;
+  }
+  .btn {
+    margin-bottom: 1.6rem; /* garante distância visual do card abaixo */
+  }
 }
+
+/* fim do breakpoint 1000px */
 
 @keyframes floatImage {
   0% {
@@ -786,21 +801,26 @@ body._lock {
   background: var(--second-bg-color);
   border-radius: var(--card-radius);
   padding: 0;
-  width: 570px;
-  height: 205px;
+  /* largura fluida com limite superior */
+  width: clamp(205px, 45vw, 570px);
   max-width: 95%;
-  margin: 0;
+  height: auto;
+  min-height: 120px;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .newScreen .code-card .title-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 8px 12px;
   background: var(--second-bg-color);
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  flex-wrap: nowrap;
 }
 
 .newScreen .window-controls {
@@ -810,8 +830,8 @@ body._lock {
 }
 
 .newScreen .window-controls .control {
-  width: 12px;
-  height: 12px;
+  width: clamp(8px, 1.2vw, 12px);
+  height: clamp(8px, 1.2vw, 12px);
   border-radius: 50%;
   display: block;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
@@ -829,32 +849,53 @@ body._lock {
 
 .newScreen .code-card .title {
   color: var(--text-color);
-  font-size: 13px;
+  font-size: clamp(11px, 0.9vw, 14px);
   opacity: 0.95;
+  flex: 1 1 auto;
+  min-width: 0; /* permite truncamento */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 8px;
 }
 
 .newScreen .portfolio-link {
-  margin-left: 170px;
+  margin-left: auto;
   color: var(--main-color);
-  font-size: 13px;
+  font-size: clamp(11px, 0.9vw, 13px);
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.02);
+  white-space: nowrap; /* manter em uma linha */
 }
 
 .newScreen .code-card pre {
   margin: 0;
   color: var(--text-color);
   font-family: "Fira Code", monospace;
-  font-size: 14px;
+  font-size: clamp(12px, 1vw, 15px);
   line-height: 1.6;
   white-space: pre-wrap;
-  padding: 18px;
+  padding: clamp(10px, 2vw, 18px);
   background: transparent;
   overflow: auto;
-  min-height: 160px;
+  min-height: 120px;
+  max-height: 40vh;
+}
+
+@media (max-width: 420px) {
+  .newScreen .code-card {
+    width: 92%;
+  }
+  .newScreen .code-card pre {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .newScreen .portfolio-link {
+    padding: 5px 8px;
+  }
 }
 
 /* Cores estilo código */
