@@ -411,6 +411,7 @@ body._lock {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2.5rem;
+  transform: scale(0.9);
 }
 .portfolio__item {
   position: relative;
@@ -418,15 +419,19 @@ body._lock {
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
-  max-height: 700px;
+  max-height: 900px;
 }
-.portfolio__item img {
+.portfolio__item img,
+.portfolio__item video {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 .portfolio__image {
   transition: 0.5s ease;
   width: 100%;
   position: relative;
+  height: 50rem; /* Define uma altura fixa para todos os cards */
 }
 .portfolio__image:before {
   content: "";
@@ -486,6 +491,9 @@ body._lock {
   background-color: var(--main-color);
   color: var(--second-bg-color);
   box-shadow: var(--box-shadow);
+}
+.portfolio__item:nth-child(3) img {
+  object-position: 0% center; /* Move a imagem um pouco para a esquerda */
 }
 
 .contact__title {
@@ -802,7 +810,7 @@ body._lock {
   border-radius: var(--card-radius);
   padding: 0;
   /* largura fluida com limite superior */
-  width: clamp(205px, 45vw, 570px);
+  width: clamp(205px, 35vw, 570px);
   max-width: 95%;
   height: auto;
   min-height: 120px;
